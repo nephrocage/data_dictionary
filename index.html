@@ -1,0 +1,1067 @@
+baseline data set
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>original_column_names</th>
+      <th>new_column_names</th>
+      <th>minimal_dataset</th>
+      <th>extended_dataset</th>
+      <th>dtypes</th>
+      <th>categories</th>
+      <th>RangeValues</th>
+      <th>category_checks</th>
+      <th>range_checks</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PatientID</td>
+      <td>REC_ID</td>
+      <td>1</td>
+      <td>1</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TransplantationID</td>
+      <td>TX_ID</td>
+      <td>1</td>
+      <td>1</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Gender</td>
+      <td>REC_SEX</td>
+      <td>1</td>
+      <td>1</td>
+      <td>category</td>
+      <td>FEMALE,\nMALE</td>
+      <td>NaN</td>
+      <td>sheet=REC_SEX</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ESRD</td>
+      <td>REC_ESRD</td>
+      <td>0</td>
+      <td>1</td>
+      <td>category</td>
+      <td>congenital,\ncystic,\ndb,\nglom,\nhfs,\ninterstitial,\nother,\ntma,\nunknown,\nurological,\nvasc</td>
+      <td>NaN</td>
+      <td>sheet=REC_ESRD</td>
+      <td>NaN</td>
+      <td>end stage renal disease - first diagnose</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>type of dialysis</td>
+      <td>REC_DIAL_TYPE</td>
+      <td>0</td>
+      <td>1</td>
+      <td>category</td>
+      <td>CAPD,\nHD,\nNONE,\nUNKNOWN</td>
+      <td>NaN</td>
+      <td>sheet=REC_DIAL_TYPE</td>
+      <td>NaN</td>
+      <td>type of dialysis: HD: hemodialysis, CAPD: continous ambulatory peritoneal dialysis</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+donor data set
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>original_column_names</th>
+      <th>new_column_names</th>
+      <th>minimal_dataset</th>
+      <th>extended_dataset</th>
+      <th>dtypes</th>
+      <th>categories</th>
+      <th>RangeValues</th>
+      <th>category_checks</th>
+      <th>range_checks</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>TransplantationID</td>
+      <td>TX_ID</td>
+      <td>1</td>
+      <td>1</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>gender_donor</td>
+      <td>DON_SEX</td>
+      <td>1</td>
+      <td>1</td>
+      <td>category</td>
+      <td>FEMALE,\nMALE,\nOTHER</td>
+      <td>NaN</td>
+      <td>sheet=DON_SEX</td>
+      <td>NaN</td>
+      <td>donor sex</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>age_donor</td>
+      <td>DON_AGE</td>
+      <td>1</td>
+      <td>1</td>
+      <td>float64</td>
+      <td>NaN</td>
+      <td>3.0-94.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>donor age in years and months</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>donor_bloodgroup</td>
+      <td>DON_BLOOD_GROUP</td>
+      <td>0</td>
+      <td>1</td>
+      <td>category</td>
+      <td>A,\nAB,\nB,\nO</td>
+      <td>NaN</td>
+      <td>sheet=DON_BLOOD_GROUP</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>type_of_donation</td>
+      <td>DON_TYPE</td>
+      <td>1</td>
+      <td>1</td>
+      <td>category</td>
+      <td>brain_death,\nliving</td>
+      <td>NaN</td>
+      <td>sheet=DON_TYPE</td>
+      <td>NaN</td>
+      <td>type of donation</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+lab data set
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>original_column_names</th>
+      <th>new_column_names</th>
+      <th>minimal_dataset</th>
+      <th>extended_dataset</th>
+      <th>dtypes</th>
+      <th>categories</th>
+      <th>RangeValues</th>
+      <th>category_checks</th>
+      <th>range_checks</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>TX_ID</td>
+      <td>TX_ID</td>
+      <td>1</td>
+      <td>1</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>REC_ID</td>
+      <td>REC_ID</td>
+      <td>1</td>
+      <td>1</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>TIME_FROM_TX_TO_SAMPLE</td>
+      <td>TIME_FROM_TX_TO_SAMPLE</td>
+      <td>1</td>
+      <td>1</td>
+      <td>timedelta64[ns]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>calculated timedelta from tx to sample collection (date_of_sample_collection - date_tx)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>ALBUMIN_CREATININE_RATIO</td>
+      <td>ALBUMIN_CREATININE_RATIO</td>
+      <td>0</td>
+      <td>1</td>
+      <td>float32</td>
+      <td>NaN</td>
+      <td>0.0-938680.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unit: mg/g Krea</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ALBUMIN_PER_DAY</td>
+      <td>ALBUMIN_PER_DAY</td>
+      <td>0</td>
+      <td>1</td>
+      <td>float32</td>
+      <td>NaN</td>
+      <td>1.0-189532.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>unit: mg/g Krea</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+hospitalization data set
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>original_column_names</th>
+      <th>new_column_names</th>
+      <th>dtypes</th>
+      <th>categories</th>
+      <th>RangeValues</th>
+      <th>category_checks</th>
+      <th>range_checks</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PatientID</td>
+      <td>REC_ID</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TransplantationID</td>
+      <td>TX_ID</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>anonym_KHStarttime</td>
+      <td>HS_START_TIME</td>
+      <td>datetime64[ns]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>anonym_KHEndtime</td>
+      <td>HS_END_TIME</td>
+      <td>datetime64[ns]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+biopsy data set
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>original_column_names</th>
+      <th>new_column_names</th>
+      <th>dtypes</th>
+      <th>categories</th>
+      <th>RangeValues</th>
+      <th>category_checks</th>
+      <th>range_checks</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>REC_ID</td>
+      <td>REC_ID</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>BX_TIME</td>
+      <td>BX_TIME</td>
+      <td>timedelta64[ns]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>BANFF_09_ABM</td>
+      <td>BANFF_09_ABM</td>
+      <td>category</td>
+      <td>Chronic active antibody mediated rejection,\nI,\nII,\nIII,\nindeterminate</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>BANFF_09_CAT</td>
+      <td>BANFF_09_CAT</td>
+      <td>category</td>
+      <td>1,\n1, 6,\n2,\n2, 3,\n2, 3, 5, 6,\n2, 3, 6,\n2, 4,\n2, 4, 5,\n2, 4, 5, 6,\n2, 4, 6,\n2, 5,\n2, 5, 6,\n2, 6,\n3,\n3, 5,\n3, 5, 6,\n3, 6,\n4,\n4, 5,\n4, 5, 6,\n4, 6,\n5,\n5, 6,\n6</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BANFF_09_IF</td>
+      <td>BANFF_09_IF</td>
+      <td>category</td>
+      <td>I,\nII,\nIII</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+clinical data set
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>original_column_names</th>
+      <th>new_column_names</th>
+      <th>dtypes</th>
+      <th>categories</th>
+      <th>RangeValues</th>
+      <th>category_checks</th>
+      <th>range_checks</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PatientID</td>
+      <td>REC_ID</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TransplantationID</td>
+      <td>TX_ID</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>OPDtime</td>
+      <td>TIME_FROM_TX_TO_ASSESSMENT</td>
+      <td>timedelta64[ns]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>calculated timedelta from tx to clinical assessment (date_assessment - date_tx)</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>anonym_OPDDate</td>
+      <td>ANONYM_ASSESSMENT_DATE</td>
+      <td>datetime64[ns]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>BPsys</td>
+      <td>BP_SYSTOLIC_mmHG</td>
+      <td>float64</td>
+      <td>NaN</td>
+      <td>68.0-247.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+medication data set
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>original_column_names</th>
+      <th>new_column_names</th>
+      <th>dtypes</th>
+      <th>categories</th>
+      <th>RangeValues</th>
+      <th>category_checks</th>
+      <th>range_checks</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>PatientID</td>
+      <td>REC_ID</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>TransplantationID</td>
+      <td>TX_ID</td>
+      <td>str</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>anonym_prescription start</td>
+      <td>RX_START_DATE</td>
+      <td>datetime64[ns]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>anonym_prescription end</td>
+      <td>RX_END_DATE</td>
+      <td>datetime64[ns]</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>DDD</td>
+      <td>RX_DOSAGE</td>
+      <td>float64</td>
+      <td>NaN</td>
+      <td>0.0-10000000.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+REC_SEX feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>MALE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>OTHER</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+REC_ESRD feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>congenital</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>cystic</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>db</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>glom</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>hfs</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+REC_DIAL_TYPE feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>HD</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>CAPD</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>UNKNOWN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>NONE</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+REC_BLOOD_GROUP feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AB</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>O</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+REC_CMV feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>POSITIVE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NEGATIVE</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+REC_HBS_AG feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>POSITIVE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NEGATIVE</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+REC_HCV feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>POSITIVE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NEGATIVE</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+REC_HIV feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>POSITIVE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NEGATIVE</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+REC_EBV feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>POSITIVE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NEGATIVE</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+DGF feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>YES</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NO</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+GF_CAUSE feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>functioning graft</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>cardiorenal</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>rejection</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>thrombosis</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+TX_PROGRAMM feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>AM</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>ESP</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ETKAS</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+COD_1 feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>patient living</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>infection</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>cardiovascular</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Cancer</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+DON_SEX feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>MALE</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>FEMALE</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>OTHER</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+DON_BLOOD_GROUP feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>A</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>AB</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>O</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+DON_TYPE feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>living</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>brain_death</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>cardiac_death</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
+DON_COD feature
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>allowed_values</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>unknown</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>others</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>neurologic</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>cardiovascular</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>non traumatic</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+
+
