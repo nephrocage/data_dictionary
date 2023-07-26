@@ -1,8 +1,6 @@
 ---
 layout: default
----
-
-<h1>Data Dictionary</h1><br>Here you can find information about...<br>DATA SETS<br><ul><li><b><a href="#baseline">baseline</a></b></li><li><b><a href="#donor">donor</a></b></li><li><b><a href="#lab">lab</a></b></li><li><b><a href="#hospitalization">hospitalization</a></b></li><li><b><a href="#biopsy">biopsy</a></b></li><li><b><a href="#clinical">clinical</a></b></li><li><b><a href="#medication">medication</a></b></li></ul><br> and <br>FEATURES<br><ul><li><b><a href="#REC_SEX">REC_SEX</a></b></li><li><b><a href="#REC_ESRD">REC_ESRD</a></b></li><li><b><a href="#REC_DIAL_TYPE">REC_DIAL_TYPE</a></b></li><li><b><a href="#REC_BLOOD_GROUP">REC_BLOOD_GROUP</a></b></li><li><b><a href="#REC_CMV">REC_CMV</a></b></li><li><b><a href="#REC_HBS_AG">REC_HBS_AG</a></b></li><li><b><a href="#REC_HCV">REC_HCV</a></b></li><li><b><a href="#REC_HIV">REC_HIV</a></b></li><li><b><a href="#REC_EBV">REC_EBV</a></b></li><li><b><a href="#DGF">DGF</a></b></li><li><b><a href="#GF_CAUSE">GF_CAUSE</a></b></li><li><b><a href="#TX_PROGRAMM">TX_PROGRAMM</a></b></li><li><b><a href="#COD_1">COD_1</a></b></li><li><b><a href="#DON_SEX">DON_SEX</a></b></li><li><b><a href="#DON_BLOOD_GROUP">DON_BLOOD_GROUP</a></b></li><li><b><a href="#DON_TYPE">DON_TYPE</a></b></li><li><b><a href="#DON_COD">DON_COD</a></b></li></ul><br><br><p id="baseline"><b>baseline</b> -> data set</p><table border="1" class="dataframe">
+---<h1>Data Dictionary</h1><br>Here you can find information about...<br>DATA SETS<br><ul><li><b><a href="#baseline">baseline</a></b></li><li><b><a href="#donor">donor</a></b></li><li><b><a href="#lab">lab</a></b></li><li><b><a href="#hosp">hosp</a></b></li><li><b><a href="#biopsy">biopsy</a></b></li><li><b><a href="#clinical">clinical</a></b></li><li><b><a href="#medication">medication</a></b></li></ul><br><br><p id="baseline"><b>baseline</b> -> data set</p><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -47,6 +45,19 @@ layout: default
     </tr>
     <tr>
       <th>2</th>
+      <td>SpenderID</td>
+      <td>DON_ID</td>
+      <td>1</td>
+      <td>1</td>
+      <td>str</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>3</th>
       <td>Gender</td>
       <td>REC_SEX</td>
       <td>1</td>
@@ -59,7 +70,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td>ESRD</td>
       <td>REC_ESRD</td>
       <td>0</td>
@@ -72,7 +83,7 @@ layout: default
       <td>end stage renal disease - first diagnose</td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>5</th>
       <td>type of dialysis</td>
       <td>REC_DIAL_TYPE</td>
       <td>0</td>
@@ -85,12 +96,12 @@ layout: default
       <td>type of dialysis: HD: hemodialysis, CAPD: continous ambulatory peritoneal dialysis</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>6</th>
       <td>number of transplantation</td>
       <td>REC_NUM_TX</td>
       <td>0</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>1.0-4.0</td>
       <td></td>
@@ -98,7 +109,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>7</th>
       <td>Center</td>
       <td>CENTER</td>
       <td>0</td>
@@ -111,7 +122,7 @@ layout: default
       <td>name code for center of transplantation</td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>8</th>
       <td>p_bloodgroup</td>
       <td>REC_BLOOD_GROUP</td>
       <td>0</td>
@@ -124,12 +135,12 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>9</th>
       <td>p_height</td>
       <td>REC_HEIGHT</td>
       <td>0</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>110.0-205.0</td>
       <td></td>
@@ -137,7 +148,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>9</th>
+      <th>10</th>
       <td>CMV_AK</td>
       <td>REC_CMV</td>
       <td>0</td>
@@ -150,7 +161,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>10</th>
+      <th>11</th>
       <td>HbS_AG</td>
       <td>REC_HBS_AG</td>
       <td>0</td>
@@ -163,7 +174,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>11</th>
+      <th>12</th>
       <td>HCV_AK</td>
       <td>REC_HCV</td>
       <td>0</td>
@@ -176,7 +187,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>12</th>
+      <th>13</th>
       <td>anti_HIV</td>
       <td>REC_HIV</td>
       <td>0</td>
@@ -189,7 +200,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>13</th>
+      <th>14</th>
       <td>EBV_IgG</td>
       <td>REC_EBV</td>
       <td>0</td>
@@ -202,7 +213,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>14</th>
+      <th>15</th>
       <td>delayed graft function_inverse</td>
       <td>DGF</td>
       <td>0</td>
@@ -215,12 +226,12 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>15</th>
+      <th>16</th>
       <td>number_dialysis</td>
       <td>DGF_DIAL_NUM</td>
       <td>0</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>0.0-52.0</td>
       <td></td>
@@ -228,12 +239,12 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>16</th>
+      <th>17</th>
       <td>cold ischemia time</td>
       <td>CIT_HOUR</td>
       <td>1</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>0.5-34.0</td>
       <td></td>
@@ -241,7 +252,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>17</th>
+      <th>18</th>
       <td>MMA_broad</td>
       <td>MMA</td>
       <td>1</td>
@@ -254,7 +265,7 @@ layout: default
       <td>number of mismatches in A (HLA typing)</td>
     </tr>
     <tr>
-      <th>18</th>
+      <th>19</th>
       <td>MMB_broad</td>
       <td>MMB</td>
       <td>1</td>
@@ -267,7 +278,7 @@ layout: default
       <td>number of mismatches in B (HLA typing)</td>
     </tr>
     <tr>
-      <th>19</th>
+      <th>20</th>
       <td>MMDR_broad</td>
       <td>MMDR</td>
       <td>1</td>
@@ -280,7 +291,7 @@ layout: default
       <td>number of mismatches in DR (HLA typing)</td>
     </tr>
     <tr>
-      <th>20</th>
+      <th>21</th>
       <td>MM_broad</td>
       <td>MM</td>
       <td>1</td>
@@ -293,7 +304,7 @@ layout: default
       <td>total number of mismatches in A, B and DR</td>
     </tr>
     <tr>
-      <th>21</th>
+      <th>22</th>
       <td>Loss cause</td>
       <td>GF_CAUSE</td>
       <td>1</td>
@@ -306,7 +317,7 @@ layout: default
       <td>primary cause of graft loss</td>
     </tr>
     <tr>
-      <th>22</th>
+      <th>23</th>
       <td>Programm</td>
       <td>TX_PROGRAMM</td>
       <td>0</td>
@@ -319,11 +330,11 @@ layout: default
       <td>the transplantation program for receiving a deceased donor graft</td>
     </tr>
     <tr>
-      <th>23</th>
+      <th>24</th>
       <td>1</td>
       <td>COD_1</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>category</td>
       <td>Cancer, cardiovascular, infection, others, patient living, unknown</td>
       <td></td>
@@ -332,7 +343,20 @@ layout: default
       <td>primary cause of death</td>
     </tr>
     <tr>
-      <th>24</th>
+      <th>25</th>
+      <td>PIRCHE_Score</td>
+      <td>PIRCHE</td>
+      <td>0</td>
+      <td>1</td>
+      <td>float64</td>
+      <td></td>
+      <td>0.0-280.2780857315811</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>26</th>
       <td>anonym_DateofTransplantation</td>
       <td>ANONYM_DATE_TX</td>
       <td>0</td>
@@ -345,7 +369,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>25</th>
+      <th>27</th>
       <td>anonym_Dateofdialysis</td>
       <td>ANONYM_DATE_DIAL</td>
       <td>0</td>
@@ -358,7 +382,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>26</th>
+      <th>28</th>
       <td>anonym_Dateofbirth</td>
       <td>ANONYM_DATE_BIRTH</td>
       <td>0</td>
@@ -371,7 +395,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>27</th>
+      <th>29</th>
       <td>anonym_Date of graft loss</td>
       <td>ANONYM_DATE_GF_LOSS</td>
       <td>0</td>
@@ -384,7 +408,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>28</th>
+      <th>30</th>
       <td>anonym_date last seen</td>
       <td>ANONYM_DATE_LAST_SEEN</td>
       <td>0</td>
@@ -397,7 +421,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>29</th>
+      <th>31</th>
       <td>anonym_Date of Death</td>
       <td>ANONYM_DATE_DEATH</td>
       <td>0</td>
@@ -410,7 +434,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>30</th>
+      <th>32</th>
       <td>age_at_tx</td>
       <td>AGE_TX</td>
       <td>1</td>
@@ -423,7 +447,7 @@ layout: default
       <td>calculated age at tx (date_tx - date_of_birth)</td>
     </tr>
     <tr>
-      <th>31</th>
+      <th>33</th>
       <td>time_from_tx_to_graft_loss</td>
       <td>TIME_FROM_TX_TO_GRAFT_LOSS</td>
       <td>1</td>
@@ -436,7 +460,7 @@ layout: default
       <td>calculated timedelta from tx to graft loss (date_gf - date_tx)</td>
     </tr>
     <tr>
-      <th>32</th>
+      <th>34</th>
       <td>time_on_dial_pre_tx</td>
       <td>TIME_ON_DIAL_PRE_TX</td>
       <td>1</td>
@@ -449,7 +473,7 @@ layout: default
       <td>calculated time on dialysis before tx (date_tx - date_of_first_dialysis), if the first dialysis occurred after tx set it to None</td>
     </tr>
     <tr>
-      <th>33</th>
+      <th>35</th>
       <td>time_from_tx_to_last_seen</td>
       <td>TIME_FROM_TX_TO_LAST_SEEN</td>
       <td>1</td>
@@ -462,7 +486,7 @@ layout: default
       <td>calculated timedelta from tx to last seen (date_last_seen - date_tx)</td>
     </tr>
     <tr>
-      <th>34</th>
+      <th>36</th>
       <td>time_from_tx_to_death</td>
       <td>TIME_FROM_TX_TO_DEATH</td>
       <td>1</td>
@@ -507,6 +531,19 @@ layout: default
     </tr>
     <tr>
       <th>1</th>
+      <td>SpenderID</td>
+      <td>DON_ID</td>
+      <td>1</td>
+      <td>1</td>
+      <td>str</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>anonymized id via uuid5</td>
+    </tr>
+    <tr>
+      <th>2</th>
       <td>gender_donor</td>
       <td>DON_SEX</td>
       <td>1</td>
@@ -519,7 +556,7 @@ layout: default
       <td>donor sex</td>
     </tr>
     <tr>
-      <th>2</th>
+      <th>3</th>
       <td>age_donor</td>
       <td>DON_AGE</td>
       <td>1</td>
@@ -528,11 +565,11 @@ layout: default
       <td></td>
       <td>3.0-94.0</td>
       <td></td>
-      <td></td>
+      <td>1-94</td>
       <td>donor age in years and months</td>
     </tr>
     <tr>
-      <th>3</th>
+      <th>4</th>
       <td>donor_bloodgroup</td>
       <td>DON_BLOOD_GROUP</td>
       <td>0</td>
@@ -545,7 +582,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>4</th>
+      <th>5</th>
       <td>type_of_donation</td>
       <td>DON_TYPE</td>
       <td>1</td>
@@ -558,7 +595,7 @@ layout: default
       <td>type of donation</td>
     </tr>
     <tr>
-      <th>5</th>
+      <th>6</th>
       <td>donor_COD</td>
       <td>DON_COD</td>
       <td>0</td>
@@ -571,12 +608,12 @@ layout: default
       <td>primary cause of death of the donor</td>
     </tr>
     <tr>
-      <th>6</th>
+      <th>7</th>
       <td>donor_weight</td>
       <td>DON_WEIGHT</td>
       <td>0</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>18.0-922.0</td>
       <td></td>
@@ -584,12 +621,12 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>7</th>
+      <th>8</th>
       <td>donor_height</td>
       <td>DON_HEIGHT</td>
       <td>0</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>58.0-205.0</td>
       <td></td>
@@ -597,7 +634,7 @@ layout: default
       <td></td>
     </tr>
     <tr>
-      <th>8</th>
+      <th>9</th>
       <td>SOURCE</td>
       <td>DON_SOURCE</td>
       <td>0</td>
@@ -672,7 +709,7 @@ layout: default
       <td>ALBUMIN_CREATININE_RATIO</td>
       <td>0</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>1.0-12691.0</td>
       <td></td>
@@ -685,9 +722,9 @@ layout: default
       <td>ALBUMIN_PER_DAY</td>
       <td>0</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
-      <td>1.0-12921.0</td>
+      <td>1.0-14550.0</td>
       <td></td>
       <td>0.0-15000.0</td>
       <td>unit: mg/d</td>
@@ -698,9 +735,9 @@ layout: default
       <td>CREAT_SERUM</td>
       <td>1</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
-      <td>15.045000076293945-899.1599731445312</td>
+      <td>15.045000000000002-899.16</td>
       <td></td>
       <td>15.0-900.0</td>
       <td>unit: umol/l; creatinine in patient blood</td>
@@ -711,7 +748,7 @@ layout: default
       <td>TXF_PROTEIN_CONC</td>
       <td>1</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>3.0-7491.0</td>
       <td></td>
@@ -724,7 +761,7 @@ layout: default
       <td>PROTEIN_PER_DAY</td>
       <td>1</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>1.0-14985.0</td>
       <td></td>
@@ -737,7 +774,7 @@ layout: default
       <td>PROTEIN_CREATININE_RATIO</td>
       <td>1</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>6.0-14926.0</td>
       <td></td>
@@ -750,7 +787,7 @@ layout: default
       <td>PROTEIN_DIPSTICK</td>
       <td>1</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>0.0-20000.0</td>
       <td></td>
@@ -763,7 +800,7 @@ layout: default
       <td>HARMONIZED_PROTEINS</td>
       <td>1</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
       <td>0.0-30000.0</td>
       <td></td>
@@ -776,15 +813,15 @@ layout: default
       <td>EGFR</td>
       <td>1</td>
       <td>1</td>
-      <td>float32</td>
+      <td>float64</td>
       <td></td>
-      <td>3.805288076400757-181.33145141601562</td>
+      <td>3.799521715333623-181.51383166188242</td>
       <td></td>
       <td></td>
       <td>script is provided at https://github.com/nephrocage/data_pipeline/blob/lh-protein-harmonization-script/scripts/egfr.py</td>
     </tr>
   </tbody>
-</table><br><br><p id="hospitalization"><b>hospitalization</b> -> data set</p><table border="1" class="dataframe">
+</table><br><br><p id="hosp"><b>hosp</b> -> data set</p><table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
@@ -823,9 +860,9 @@ layout: default
     </tr>
     <tr>
       <th>2</th>
-      <td>anonym_KHStarttime</td>
-      <td>HS_START_TIME</td>
-      <td>datetime64[ns]</td>
+      <td>KHStarttime</td>
+      <td>TIME_FROM_TX_TO_HS_START</td>
+      <td>timedelta64[ns]</td>
       <td></td>
       <td></td>
       <td></td>
@@ -834,9 +871,9 @@ layout: default
     </tr>
     <tr>
       <th>3</th>
-      <td>anonym_KHEndtime</td>
-      <td>HS_END_TIME</td>
-      <td>datetime64[ns]</td>
+      <td>KHEndtime</td>
+      <td>TIME_FROM_TX_TO_HS_END</td>
+      <td>timedelta64[ns]</td>
       <td></td>
       <td></td>
       <td></td>
@@ -1484,459 +1521,6 @@ layout: default
       <td></td>
       <td></td>
       <td></td>
-    </tr>
-  </tbody>
-</table><br><br><p id="REC_SEX"><b>REC_SEX</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>MALE</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>FEMALE</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>OTHER</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="REC_ESRD"><b>REC_ESRD</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>congenital</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>cystic</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>db</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>glom</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>hfs</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>interstitial</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>other</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>tma</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>urological</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>unknown</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>vasc</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="REC_DIAL_TYPE"><b>REC_DIAL_TYPE</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>HD</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>CAPD</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>UNKNOWN</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>NONE</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="REC_BLOOD_GROUP"><b>REC_BLOOD_GROUP</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>A</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>B</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AB</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>O</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="REC_CMV"><b>REC_CMV</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>POSITIVE</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>NEGATIVE</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="REC_HBS_AG"><b>REC_HBS_AG</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>POSITIVE</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>NEGATIVE</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="REC_HCV"><b>REC_HCV</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>POSITIVE</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>NEGATIVE</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="REC_HIV"><b>REC_HIV</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>POSITIVE</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>NEGATIVE</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="REC_EBV"><b>REC_EBV</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>POSITIVE</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>NEGATIVE</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="DGF"><b>DGF</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>YES</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>NO</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="GF_CAUSE"><b>GF_CAUSE</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>functioning graft</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>cardiorenal</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>rejection</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>GN</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>thrombosis</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>CNI toxicity</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>primary non_function</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>TMA</td>
-    </tr>
-    <tr>
-      <th>8</th>
-      <td>urinary tract infections/pyelonephritis</td>
-    </tr>
-    <tr>
-      <th>9</th>
-      <td>BK nephropathy</td>
-    </tr>
-    <tr>
-      <th>10</th>
-      <td>cancer</td>
-    </tr>
-    <tr>
-      <th>11</th>
-      <td>bleeding</td>
-    </tr>
-    <tr>
-      <th>12</th>
-      <td>unknown</td>
-    </tr>
-    <tr>
-      <th>13</th>
-      <td>other</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="TX_PROGRAMM"><b>TX_PROGRAMM</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>AM</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>ESP</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>ETKAS</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="COD_1"><b>COD_1</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>patient living</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>unknown</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>infection</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>cardiovascular</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Cancer</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>others</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="DON_SEX"><b>DON_SEX</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>MALE</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>FEMALE</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>OTHER</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="DON_BLOOD_GROUP"><b>DON_BLOOD_GROUP</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>A</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>B</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>AB</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>O</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="DON_TYPE"><b>DON_TYPE</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>living</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>brain_death</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>cardiac_death</td>
-    </tr>
-  </tbody>
-</table><br><br><p id="DON_COD"><b>DON_COD</b> -> feature</p><table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>allowed_values</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>unknown</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>others</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>neurologic</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>cardiovascular</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>non traumatic</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>Trauma</td>
-    </tr>
-    <tr>
-      <th>6</th>
-      <td>Tumor</td>
-    </tr>
-    <tr>
-      <th>7</th>
-      <td>living donation</td>
     </tr>
   </tbody>
 </table><br><br>
